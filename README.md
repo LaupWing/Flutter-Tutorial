@@ -16,3 +16,14 @@ void main() => runApp(MaterialApp(
 ```
 ### Scaffold
 Scaffold is one the most commonly used widged. It is used to make your base layout for your app. The Scaffold widged gots a multiple of diffrent property's like appBar for the top navigation.
+```dart
+void main() => runApp(MaterialApp(
+  home: Scaffold(
+    appBar: AppBar(
+      title: Text('Hello'),
+      centerTitle: true,
+    ),
+  ),
+
+));
+```
