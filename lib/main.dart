@@ -16,7 +16,9 @@ class Home extends StatelessWidget {
       ),
       body: Center(
         child: IconButton(
-          onPressed: ()=>{},
+          onPressed: (){
+            print('You clicked me');
+          },
           icon: Icon(Icons.alternate_email),
           color: Colors.amber
         )
