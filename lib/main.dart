@@ -1,41 +1,46 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
-  home: Home(),
+  home: Card(),
 
 ));
 
-class Home extends StatelessWidget {
+class Card extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[900],
       appBar: AppBar(
-        title: Text('Hello'),
+        title: Text('ID Card'),
         centerTitle: true,
-        backgroundColor: Colors.red[600],
+        backgroundColor: Colors.grey[850],
+        elevation: 0.0,
       ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Text('Hello World'),
-          FlatButton(
-            onPressed: (){},
-            color: Colors.amber,
-            child: Text('click me')
-          ),
-          Container(
-            color: Colors.cyan,
-            padding: EdgeInsets.all(30.0),
-            child: Text('container')
-          )
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: (){},
-        child: Text('click'),
-        backgroundColor: Colors.red[600],
-      ),
+      body: Padding(
+        padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              'NAME',
+              style: TextStyle(
+                color: Colors.grey,
+                letterSpacing: 2.0,
+              )
+            ),
+            SizedBox(height: 10.0,),
+            Text(
+                'Laup-Wing',
+                style: TextStyle(
+                  color: Colors.amberAccent[200],
+                  letterSpacing: 2.0,
+                  fontSize: 28.0,
+                  fontWeight: FontWeight.bold
+                )
+            )
+          ],
+        )
+      )
     );
   }
 }
